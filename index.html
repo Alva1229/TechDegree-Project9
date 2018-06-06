@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" rel="stylesheet" type="text/css"/>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+  <body>
+    <header>
+      <div class="header-title-bar">
+        <a href="#"><b>Your</b><span style="font-weight: lighter;">App&#8482;</span></a>
+        <img class="bell-icon" src="icons/icon-bell.svg"/> 
+      </div>
+      <div class="myAvatar">
+        <img src="https://randomuser.me/api/portraits/lego/1.jpg"/>
+        <p>Emilio Alvarez</p>
+      </div>
+    </header>
+    <div class="navigation">
+      <nav>
+        <ul>
+          <li><a href="#"><img src="icons/icon-dashboard.svg"/></a></li>
+          <li><a href="#"><img src="icons/icon-members.svg"/></a></li>
+          <li><a href="#"><img src="icons/icon-visits.svg"/></a></li>
+          <li><a href="#"><img src="icons/icon-settings.svg"/></a></li>
+        </ul>
+      </nav>
+     </div>
+     <div class="dashboard-nav">
+       <h1>Dashboard</h1>
+       <input id="search-bar" placeholder="Search"/>
+     </div>
+     <div class="alert">
+      <p><b>Alert </b><span style="font-weight: lighter;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam dignissimos libero sequi praesentium odio.</span></p>
+      <span class="close-btn" onclick="this.parentElement.style.display='none';"><strong>x</strong></span>
+     </div>
+     
+
+     <canvas id="myChart" width="800" height="300"></canvas>
+
+    <footer>
+
+    </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <script src="js/graphs.js"></script>
+</body>
+</html>
