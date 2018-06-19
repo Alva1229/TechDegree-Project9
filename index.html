@@ -5,6 +5,7 @@
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" rel="stylesheet" type="text/css"/>
+  <script src="//code.simplesvg.com/1/1.0.0-beta5/simple-svg.min.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -30,16 +31,184 @@
       </nav>
      </div>
      <div class="dashboard-nav">
-       <h1>Dashboard</h1>
+       <h1 style="font-weight: lighter; color: #8f8c8c;">Dashboard</h1>
        <input id="search-bar" placeholder="Search"/>
      </div>
      <div class="alert">
       <p><b>Alert </b><span style="font-weight: lighter;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam dignissimos libero sequi praesentium odio.</span></p>
       <span class="close-btn" onclick="this.parentElement.style.display='none';"><strong>x</strong></span>
      </div>
+     <div class="traffic-navigation"> 
+       <h3>TRAFFIC</h3>
+        <div class="switch-toggle switch-candy">
+          <input id="week" name="view" type="radio" checked>
+          <label for="week" onclick="">Hourly</label>
+      
+          <input id="month" name="view" type="radio">
+          <label for="month" onclick="">Daily</label>
+      
+          <input id="day" name="view" type="radio">
+          <label for="day" onclick="">Weekly</label>
+
+          <input id="day" name="view" type="radio">
+          <label for="day" onclick="">Monthly</label>
+      
+          <a></a>
+        </div>
+     </div>
      
 
      <canvas id="myChart" width="800" height="300"></canvas>
+     
+     <div class="daily-traffic">
+      <h3>DAILY TRAFFIC</h3>
+      <canvas id="barChart" width="800" height="300"></canvas>
+     </div>
+     <div class="mobile-users">
+        <h3>MOBILE USERS</h3>
+        <canvas id="doughnutChart" width="800" height="300"></canvas>
+      </div>
+
+      <!---SOCIAL MEDIA DIVS-->
+      <div class="socialmedia-container">
+        <h3>SOCIAL STATS</h3>
+        <div class="twitter">
+          <div class="icon-container">
+            <img src="icons/icon-twitter.svg"/>
+          </div>
+          <div class="social-stats">
+            <h3>Twitter</h3>
+            <p>10,345</p>
+          </div>
+        </div>
+        <div class="facebook">
+          <div class="icon-container">
+            <img src="icons/icon-facebook.svg"/>
+          </div>
+          <div class="social-stats">
+            <h3>Facebook</h3>
+            <p>8,739</p>
+          </div>
+        </div>
+        <div class="googleplus">
+          <div class="icon-container">
+            <img src="icons/icon-google-plus.svg"/>
+          </div>
+          <div class="social-stats">
+            <h3>Google+</h3>
+            <p>2,530</p>
+          </div>
+        </div>
+      </div>
+      
+      <!--MEMBER ACTIVITY-->
+      <div class="new-members">
+        <h3>NEW MEMBERS</h3>
+        <div class="member-info">
+          <img src="https://randomuser.me/api/portraits/women/57.jpg"/>
+          <p>Victoria Chambers</br><a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a><span class="date">10/15/15</span></p>
+        </div>
+        <div class="member-info">
+          <img src="https://randomuser.me/api/portraits/men/93.jpg"/>
+          <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
+        </div>
+        <div class="member-info">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg"/>
+            <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
+          </div>
+          <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/women/82.jpg"/>
+              <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
+            </div>
+      </div>
+      <div class="recent-activity">
+        <h3>RECENT ACTIVITY</h3>
+        <div class="member-info">
+          <img src="https://randomuser.me/api/portraits/women/57.jpg"/>
+          <p>Victoria Chambers commented on YourApp's SEO Tips</br>4 hours ago</p>
+          <div class="chevron">
+            <i class="arrow right"></i>
+          </div>
+        </div>
+        <div class="member-info">
+          <img src="https://randomuser.me/api/portraits/men/93.jpg"/>
+          <p>Dale Byrd like the post Facebook's Changes for 2016</br>5 hours ago</p>
+          <div class="chevron">
+            <i class="arrow right"></i>
+          </div>
+        </div>
+        <div class="member-info">
+            <img src="https://randomuser.me/api/portraits/men/3.jpg"/>
+            <p>Dawn Wood commented on Facebook's Changes for 2016</br>5 hours ago</p>
+            <div class="chevron">
+              <i class="arrow right"></i>
+            </div>  
+            </div>
+          <div class="member-info">
+              <img src="https://randomuser.me/api/portraits/women/82.jpg"/>
+              <p>Dan Oliver posted YourApp's SEO Tips</br>1 day ago</p>
+              <div class="chevron">
+                <i class="arrow right"></i>
+              </div>
+          </div>
+      </div>
+
+      <!--MESSAGE USER-->
+      <div class="message-user-container">
+        <h3>MESSAGE USER</h3>
+        <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
+        <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
+        <button class='send' type="submit">SEND</button>
+      </div>
+
+      <!--SETTINGS-->
+      <div class="message-user-container">
+          <h3>SETTINGS</h3>
+          <div class="settings">
+            <p class='light'>Send Email Notifications</p>  
+            
+            <label class="switch-light switch-ios" onclick="">
+              <input type="checkbox">
+  
+              <span class="togglebtn">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+          </div>
+          <div class="settings">
+            <p class='light2'>Set Profile to Public</p>  
+            
+            <label class="switch-light switch-ios" onclick="">
+              <input type="checkbox">
+  
+              <span class="togglebtn">
+                <span>Off</span>
+                <span>On</span>
+                <a></a>
+              </span>
+            </label>
+          </div>  
+          <div class="timezone">
+            <select id="timezone" name="timezone">
+              <option timeZoneId="1" gmtAdjustment="GMT-12:00" useDaylightTime="0" value="-12">(GMT-12:00) International Date Line West</option>
+              <option timeZoneId="2" gmtAdjustment="GMT-11:00" useDaylightTime="0" value="-11">(GMT-11:00) Midway Island, Samoa</option>
+              <option timeZoneId="3" gmtAdjustment="GMT-10:00" useDaylightTime="0" value="-10">(GMT-10:00) Hawaii</option>
+              <option timeZoneId="4" gmtAdjustment="GMT-09:00" useDaylightTime="1" value="-9">(GMT-09:00) Alaska</option>
+              <option timeZoneId="5" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+              <option timeZoneId="6" gmtAdjustment="GMT-08:00" useDaylightTime="1" value="-8">(GMT-08:00) Tijuana, Baja California</option>
+              <option timeZoneId="7" gmtAdjustment="GMT-07:00" useDaylightTime="0" value="-7">(GMT-07:00) Arizona</option>
+              <option timeZoneId="8" gmtAdjustment="GMT-07:00" useDaylightTime="1" value="-7">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+            </select>
+            </div>
+            <div class="settings-buttons">
+            <button class='save' type="submit">SAVE</button>
+            <button class='cancel' type="submit">CANCEL</button>
+            </div>
+        </div>
+        
+      
 
     <footer>
 

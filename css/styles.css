@@ -1,6 +1,7 @@
 /*MAIN Styles*/
-
-
+h3 {
+   font-weight: lighter; 
+}
 /*HEADER StyLES*/
 header {
     background-color: #695bb6;
@@ -33,6 +34,234 @@ list-style-type: none;
 padding-right: 15px;
 }
 
+.traffic-container h2 {
+    padding-left: 15px;
+}
+
+.traffic-navigation {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.traffic-navigation input{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.traffic-navigation li {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 15px;
+   
+}
+
+.daily-traffic {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.mobile-users {
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.twitter, .facebook, .googleplus {
+    display: flex;
+    margin: 1em;
+    background-color: #f6fafa;
+    padding: 1.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.icon-container {
+    background-color: #4c4575;
+    border-radius: 50%;
+    width: 75px;
+
+}
+
+.socialmedia-container h3{ 
+    color: #8f8c8c;;
+    margin-top: 15px;
+    padding-left: 15px;
+    text-align: left;
+    font-size: 1em;   
+}
+
+.social-stats h3{
+    font-weight: bold;
+    color: #4c4575;
+    margin: 0;
+    padding-left: 20px;
+    text-align: left;
+    
+}
+
+.social-stats p{
+    font-weight: lighter;
+    font-size: 3em;
+    color: #8f8c8c;;
+    margin: 0;
+    padding-left: 20px;
+    
+}
+
+.member-info {
+    display:  flex;
+    border-bottom: 1px solid #ccc;
+}
+
+.new-members, .recent-activity, h3{
+    padding-left: 5px;
+    color: #8f8c8c;
+}
+.new-members, .recent-activity, p{
+   margin: 5px;
+   font-size: .85em;
+   padding-top: 5px;
+   color: #8f8c8c;
+}
+.new-members a{
+    color: #4c4575; 
+}
+.member-info img {
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+}
+
+ 
+.date {
+    position: absolute;
+    right: 0;
+    padding-right: 25px;
+}
+
+ .chevron {
+    position: absolute;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 25px;
+}
+
+.chevron i {
+    border: solid #4c4575;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+}
+
+ .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.message-user-container { 
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;  
+}
+
+.message-user-container textarea { 
+    width: 100%;
+    margin-top: 20px; 
+    border-radius: 3px;
+}
+
+.message-user-container button { 
+    width: 100%;
+    margin-top: 20px; 
+    border-radius: 5px;
+    background-color: rgb(76, 69, 117);
+    color: #ffffff;
+    padding: 15px;
+}
+
+
+
+.switch-toggle.switch-candy,
+.switch-light.switch-candy > span {
+  background-color: #ffffff;
+  border-radius: 3px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.switch-light.switch-candy input ~ span span:first-child,
+.switch-light.switch-candy input:checked ~ span span:nth-child(2),
+.switch-candy input:checked + label {
+  color: #ffffff;
+
+}
+
+.switch-light.switch-candy span span, .switch-light.switch-candy input:checked ~ span span:first-child, .switch-toggle.switch-candy label {
+    color: #ccc;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.switch-candy a {
+    border: 1px solid #333;
+    border-radius: 13px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+    background-color: #70c66b;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  }
+
+  .switch-light, .switch-ios {
+      width: 90px;
+      padding: 15px;
+  }
+
+  .switch-ios.switch-light input:checked ~ span {
+    border-color: #ccc;
+    box-shadow: inset 0 0 0 30px #4c4575;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+    border-color: #ccc;
+}
+
+.settings {
+    display: flex;
+}
+.light {
+    padding-right: 30px;
+    padding-top: 20px;
+}
+.light2 {
+    padding-right: 60px;
+    padding-top: 20px;
+
+}
+ .timezone {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+ }
+select {
+    width: 100%;
+}
+.save .cancel{
+    width: 30%;
+}
+.message-user-container .save {
+    margin: 5px;
+}
+
+.message-user-container .cancel {
+    background-color: #a6adad;
+    margin: 5px;
+}
+.settings-buttons {
+    display: flex;
+}
 /*IMAGES Styles*/
 .bell-icon {
     float: right;
@@ -44,6 +273,7 @@ padding-right: 15px;
 .myAvatar p{
     margin: 0;
     padding-top: 5px;
+    color: white;
 }
 .myAvatar img{
     width: 80px;
@@ -83,6 +313,7 @@ input {
 .alert p {
     padding-left: 10px;
     padding-right: 10px;
+    color: white;
 }
 
 .close-btn {
@@ -91,7 +322,6 @@ height: 20px;
 background-color: transparent;
 border: none;
 padding: 5px;
-position: fixed;
-top: 1;
-right: 0;
+
 }
+
