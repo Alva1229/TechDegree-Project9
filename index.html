@@ -30,78 +30,87 @@
         </ul>
       </nav>
      </div>
+     <div class="wrapper">
      <div class="dashboard-nav">
+       <div>
        <h1 style="font-weight: lighter; color: #8f8c8c;">Dashboard</h1>
+      </div>
+      <div class="search-box">
        <input id="search-bar" placeholder="Search"/>
-     </div>
+      </div>
+      </div>
      <div class="alert">
-      <p><b>Alert </b><span style="font-weight: lighter;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam dignissimos libero sequi praesentium odio.</span></p>
+      <p><b>Alert </b><span style="font-weight: lighter;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam dignissimos libero sequi praesentium odio. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni quisquam dignissimos libero sequi praesentium odio.</span></p>
       <span class="close-btn" onclick="this.parentElement.style.display='none';"><strong>x</strong></span>
      </div>
      <div class="traffic-navigation"> 
        <h3>TRAFFIC</h3>
         <div class="switch-toggle switch-candy">
-          <input id="week" name="view" type="radio" checked>
-          <label for="week" onclick="">Hourly</label>
-      
-          <input id="month" name="view" type="radio">
-          <label for="month" onclick="">Daily</label>
+          <input id="hourly" name="view" type="radio" checked>
+          <label for="hourly" onclick="">Hourly</label>
       
           <input id="day" name="view" type="radio">
-          <label for="day" onclick="">Weekly</label>
+          <label for="day" onclick="">Daily</label>
+      
+          <input id="weekly" name="view" type="radio">
+          <label for="weekly" onclick="">Weekly</label>
 
-          <input id="day" name="view" type="radio">
-          <label for="day" onclick="">Monthly</label>
+          <input id="month" name="view" type="radio">
+          <label for="month" onclick="">Monthly</label>
       
           <a></a>
         </div>
      </div>
      
-
      <canvas id="myChart" width="800" height="300"></canvas>
      
-     <div class="daily-traffic">
-      <h3>DAILY TRAFFIC</h3>
-      <canvas id="barChart" width="800" height="300"></canvas>
-     </div>
-     <div class="mobile-users">
-        <h3>MOBILE USERS</h3>
-        <canvas id="doughnutChart" width="800" height="300"></canvas>
+     <div class="daily-mobile-container">
+      <div class="daily-traffic">
+        <h3>DAILY TRAFFIC</h3>
+        <canvas id="barChart" width="800" height="300"></canvas>
       </div>
+      <div class="mobile-users">
+          <h3>MOBILE USERS</h3>
+          <canvas id="doughnutChart" width="800" height="300"></canvas>
+      </div>
+    </div>
 
       <!---SOCIAL MEDIA DIVS-->
       <div class="socialmedia-container">
         <h3>SOCIAL STATS</h3>
-        <div class="twitter">
-          <div class="icon-container">
-            <img src="icons/icon-twitter.svg"/>
+          <div class="twt-fbk-goog">
+            <div class="twitter">
+              <div class="icon-container">
+                <img src="icons/icon-twitter.svg"/>
+              </div>
+              <div class="social-stats">
+                <h3>Twitter</h3>
+                <p>10,345</p>
+              </div>
+            </div>
+            <div class="facebook">
+              <div class="icon-container">
+                <img src="icons/icon-facebook.svg"/>
+              </div>
+              <div class="social-stats">
+                <h3>Facebook</h3>
+                <p>8,739</p>
+              </div>
+            </div>
+            <div class="googleplus">
+              <div class="icon-container">
+                <img src="icons/icon-google-plus.svg"/>
+              </div>
+              <div class="social-stats">
+                <h3>Google+</h3>
+                <p>2,530</p>
+              </div>
+            </div>
           </div>
-          <div class="social-stats">
-            <h3>Twitter</h3>
-            <p>10,345</p>
-          </div>
-        </div>
-        <div class="facebook">
-          <div class="icon-container">
-            <img src="icons/icon-facebook.svg"/>
-          </div>
-          <div class="social-stats">
-            <h3>Facebook</h3>
-            <p>8,739</p>
-          </div>
-        </div>
-        <div class="googleplus">
-          <div class="icon-container">
-            <img src="icons/icon-google-plus.svg"/>
-          </div>
-          <div class="social-stats">
-            <h3>Google+</h3>
-            <p>2,530</p>
-          </div>
-        </div>
       </div>
       
       <!--MEMBER ACTIVITY-->
+      <div class="member-activity">
       <div class="new-members">
         <h3>NEW MEMBERS</h3>
         <div class="member-info">
@@ -116,7 +125,7 @@
             <img src="https://randomuser.me/api/portraits/men/3.jpg"/>
             <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
           </div>
-          <div class="member-info">
+          <div class="member-info-last">
               <img src="https://randomuser.me/api/portraits/women/82.jpg"/>
               <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
             </div>
@@ -144,7 +153,7 @@
               <i class="arrow right"></i>
             </div>  
             </div>
-          <div class="member-info">
+          <div class="member-info-last">
               <img src="https://randomuser.me/api/portraits/women/82.jpg"/>
               <p>Dan Oliver posted YourApp's SEO Tips</br>1 day ago</p>
               <div class="chevron">
@@ -152,8 +161,9 @@
               </div>
           </div>
       </div>
-
+    </div>
       <!--MESSAGE USER-->
+      <div class="message-settings">
       <div class="message-user-container">
         <h3>MESSAGE USER</h3>
         <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
@@ -162,7 +172,7 @@
       </div>
 
       <!--SETTINGS-->
-      <div class="message-user-container">
+      <div class="settings-user-container">
           <h3>SETTINGS</h3>
           <div class="settings">
             <p class='light'>Send Email Notifications</p>  
@@ -207,9 +217,8 @@
             <button class='cancel' type="submit">CANCEL</button>
             </div>
         </div>
-        
-      
-
+      </div> 
+    </div>
     <footer>
 
     </footer>

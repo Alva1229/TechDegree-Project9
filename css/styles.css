@@ -1,3 +1,9 @@
+/*GLOBAL STYLES*/
+* {
+    box-sizing: border-box;
+   /*border: 1px solid red;*/
+  }
+
 /*MAIN Styles*/
 h3 {
    font-weight: lighter; 
@@ -12,7 +18,12 @@ header {
     width:100%;
     
 }
-
+.search-box {
+    width: 100%;
+}
+.dashboard-nav input{
+width: 100%;
+}
 .header-title-bar a {
     color: white;
     text-decoration: none;
@@ -115,6 +126,7 @@ padding-right: 15px;
 .member-info {
     display:  flex;
     border-bottom: 1px solid #ccc;
+    padding: 5px;
 }
 
 .new-members, .recent-activity, h3{
@@ -135,7 +147,15 @@ padding-right: 15px;
    width: 40px;
    height: 40px;
 }
+.member-info-last {
+    display: flex;
 
+}
+.member-info-last img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
  
 .date {
     position: absolute;
@@ -147,7 +167,7 @@ padding-right: 15px;
     position: absolute;
     right: 0;
     padding-top: 10px;
-    padding-right: 25px;
+    padding-right: 15px;
 }
 
 .chevron i {
@@ -168,10 +188,17 @@ padding-right: 15px;
     margin-bottom: 15px;  
 }
 
+.message-user-container input { 
+    margin-top: 20px; 
+    border-radius: 3px;
+    height: 50px;
+}
+
 .message-user-container textarea { 
     width: 100%;
     margin-top: 20px; 
     border-radius: 3px;
+    height: 79px;
 }
 
 .message-user-container button { 
@@ -182,6 +209,16 @@ padding-right: 15px;
     color: #ffffff;
     padding: 15px;
 }
+
+.settings-user-container button { 
+    width: 100%;
+    margin-top: 20px; 
+    border-radius: 5px;
+    background-color: rgb(76, 69, 117);
+    color: #ffffff;
+    padding: 15px;
+}
+
 
 
 
@@ -247,6 +284,7 @@ padding-right: 15px;
  }
 select {
     width: 100%;
+    height: 50px;
 }
 .save .cancel{
     width: 30%;
@@ -256,6 +294,14 @@ select {
 }
 
 .message-user-container .cancel {
+    background-color: #a6adad;
+    margin: 5px;
+}
+
+.settings-user-container .save {
+    margin: 5px;
+}
+.settings-user-container .cancel {
     background-color: #a6adad;
     margin: 5px;
 }
@@ -294,7 +340,7 @@ select {
 }
 input {
     width: 100%;
-    height: 25px;
+    height: 40px;
     border-radius: 5px;
 
 }
@@ -321,7 +367,291 @@ width: 20px;
 height: 20px;
 background-color: transparent;
 border: none;
-padding: 5px;
+padding-top: 15px;
+padding-right: 15px;
 
 }
 
+/*MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+    .navigation img{
+        padding-left: 15px;
+    }
+
+    .dashboard-nav {
+        margin-bottom: 10px;   
+    }
+
+    .dashboard-nav input {
+        width: 60%;
+        position: absolute;
+        right: 0;
+        margin-top: 5px;
+        margin-right: 10px;
+       
+         
+    }
+
+    .close-btn {
+        width: 20px;    
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        padding-top: 10px;
+        padding-right: 15px;
+        
+        }   
+
+    .traffic-navigation {
+        display: flex;
+    }
+    .switch-toggle, .switch-candy input {
+        position: absolute;
+        right: 0;
+        margin-top: 15px;
+        margin-right: 15px;
+        width: 50%;
+    }
+
+    /*GRAPHS*/
+    .daily-mobile-container {
+        display: flex;
+    }
+    .daily-traffic{
+       width: 50%; 
+       border-top: 1px solid #ccc;
+       border-bottom: 1px solid #ccc;
+       padding-top: 5px;
+       padding-bottom: 20px;
+    }
+
+    .mobile-users {
+        width: 50%; 
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+    /*SOCIAL STATS*/
+
+
+    .twt-fbk-goog {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .twitter, .facebook, .googleplus {
+        display: flex;
+        margin: .05em;
+        background-color: #f6fafa;
+        padding: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        text-align: center;
+        width: 250px;
+        
+    }
+
+    .social-stats p {
+        font-weight: lighter;
+        font-size: 3em;
+        color: #8f8c8c;
+        margin: 0;
+        padding:0;
+        text-align: right;
+    }
+    .new-members, .recent-activity{
+        border-top: 1px solid #ccc;
+        margin-top: 45px;
+        width: 50%;
+        position: relative;
+    }
+    .new-members {
+        border-right: 1px solid #ccc;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+
+    .recent-activity {
+        margin-left: 0;
+        padding-left: 5px;
+    }
+
+    .member-activity {
+        display: flex;
+        
+    }
+    .member-info {
+        padding: 10px;
+        margin-right: 5px;
+    }
+    .member-info-last {
+        display: flex;
+        margin-left: 0;
+       padding: 10px;
+       padding-top: 10px;
+       padding-right: 10px;
+       padding-left: 10px;
+       padding-bottom: 25px;
+    }
+    .member-info-last img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    .message-user-container {
+        border-top: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        width: 49.8%;
+        padding-right: 10px;
+        padding-left: 10px;
+       
+    }
+
+    .message-user-container input { 
+        margin-top: 20px; 
+        border-radius: 3px;
+        height: 50px;
+    }
+
+    .message-user-container textarea { 
+        margin-top: 20px; 
+        border-radius: 3px;
+        height: 79px;
+    }
+
+    .settings-user-container {
+        border-top: 1px solid #ccc;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        width: 49.9%;
+        padding-right: 10px;
+        padding-left: 10px;    
+    }
+
+    .settings-user-container select {
+        height: 50px;
+    }
+
+    .settings-user-container .save {
+        margin: 5px;
+    }
+
+    
+    .settings-user-container .cancel {
+        background-color: #a6adad;
+        margin: 5px;
+    }
+    .settings-buttons {
+        display: flex;
+    }
+
+    .message-settings {
+        display: flex;
+    }
+
+    .alert {
+        height: 50px;
+        padding: 5px;
+    }
+} 
+
+@media (min-width: 1024px) {
+
+    header {
+        display: flex;
+        padding-bottom: 10px;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+    }
+    .header-title-bar {
+        width: 85%;
+    }
+    .bell-icon {
+        margin-top: 15px;
+    }
+    .myAvatar {
+        display: flex;
+    }
+
+    .myAvatar img {
+        width: 50px;
+        height: 50px;
+      border-radius:  50%;
+      padding: 10px;
+    }
+
+    .myAvatar p {
+        margin-top: 13px;
+    }
+   
+    .navigation {
+        height: 100%;
+        float: left;
+        width: 80px;
+        background-color: #4c4575;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+      
+    }
+    nav {
+        background-color: #4c4575;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    nav li {
+        display: block;
+        list-style-type: none;
+        padding: 0;
+        }
+        
+
+    .navigation img{
+        padding:15px;
+    }
+
+    .wrapper {
+        width: 92%;
+        float: right;
+        margin-top: 75px;
+        margin-left: 0;
+        padding-left: 0 ;
+    }
+    .dashboard-nav{
+        padding: 0;
+    }
+    .dashboard-nav h1 {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-right: 1px solid #ccc;
+        font-size: 1.5em;
+    }
+    .dashboard-nav input {
+        height: 40px;
+        width: 40%;
+        margin-right: 15px;
+        margin-top: 18px;
+    }
+
+    .search-box {
+        border-bottom: 1px solid rgb(233, 230, 230);
+        width: 100%;
+        background-color: #f9fbff;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+    
+} 
