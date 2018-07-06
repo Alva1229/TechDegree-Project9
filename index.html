@@ -5,15 +5,33 @@
   <title>Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" rel="stylesheet" type="text/css"/>
-  <script src="//code.simplesvg.com/1/1.0.0-beta5/simple-svg.min.js"></script>
+  
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  
 </head>
   <body>
     <header>
       <div class="header-title-bar">
         <a href="#"><b>Your</b><span style="font-weight: lighter;">App&#8482;</span></a>
-        <img class="bell-icon" src="icons/icon-bell.svg"/> 
+        <div class="circle" id="circle"></div>
+        <img class="bell-icon" id="bell" src="icons/icon-bell.svg"/> 
+      </div>
+      <div class="dropdown">
+          <div id="myDropdown" class="dropdown-content ">
+            <h3>Notifications</h3>
+              <ul class="" id="">
+                <li class="dropmenu">
+                 <img src="https://randomuser.me/api/portraits/women/57.jpg" alt="Random User Photo">
+                 <p><span>Victoria Chambers</span> commented on your post.</p>
+               </li>
+               <li class="dropmenu">
+                 <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="Random User Photo">
+                 <p><span>Dale Byrd</span> retweeted your post.</p>
+               </li>
+             </ul>
+          </div>
       </div>
       <div class="myAvatar">
         <img src="https://randomuser.me/api/portraits/lego/1.jpg"/>
@@ -24,19 +42,21 @@
       <nav>
         <ul>
           <li><a href="#"><img src="icons/icon-dashboard.svg"/></a></li>
-          <li><a href="#"><img src="icons/icon-members.svg"/></a></li>
-          <li><a href="#"><img src="icons/icon-visits.svg"/></a></li>
-          <li><a href="#"><img src="icons/icon-settings.svg"/></a></li>
+          <li><a href="#members"><img src="icons/icon-members.svg"/></a></li>
+          <li><a href="#activity"><img src="icons/icon-visits.svg"/></a></li>
+          <li><a href="#settings"><img src="icons/icon-settings.svg"/></a></li>
         </ul>
       </nav>
      </div>
      <div class="wrapper">
      <div class="dashboard-nav">
-       <div>
+       <div id="dashboard">
        <h1 style="font-weight: lighter; color: #8f8c8c;">Dashboard</h1>
       </div>
       <div class="search-box">
-       <input id="search-bar" placeholder="Search"/>
+        <form autocomplete="on">
+          <input id="search-bar" placeholder="Search"/>
+        </form>
       </div>
       </div>
      <div class="alert">
@@ -110,7 +130,7 @@
       </div>
       
       <!--MEMBER ACTIVITY-->
-      <div class="member-activity">
+      <div class="member-activity" id="members">
       <div class="new-members">
         <h3>NEW MEMBERS</h3>
         <div class="member-info">
@@ -130,7 +150,7 @@
               <p>Dale Byrd</br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a><span class="date">10/15/15</span></p>
             </div>
       </div>
-      <div class="recent-activity">
+      <div class="recent-activity" id="activity">
         <h3>RECENT ACTIVITY</h3>
         <div class="member-info">
           <img src="https://randomuser.me/api/portraits/women/57.jpg"/>
@@ -164,15 +184,17 @@
     </div>
       <!--MESSAGE USER-->
       <div class="message-settings">
-      <div class="message-user-container">
+      <div class="message-user-container" id="message-user">
         <h3>MESSAGE USER</h3>
+        <form name="myForm" id="message-form" method="post">
         <input required type='text' id='search-name' name='user_name' placeholder='Search for User'>
-        <textarea id='other' name='user-bio' placeholder='Message for User'></textarea>
-        <button class='send' type="submit">SEND</button>
+        <textarea required id='other' name='user-bio' placeholder='Message for User'></textarea>
+        <button id='send' class='send' type="submit">SEND</button>
+      </form>
       </div>
 
       <!--SETTINGS-->
-      <div class="settings-user-container">
+      <div class="settings-user-container" id="settings">
           <h3>SETTINGS</h3>
           <div class="settings">
             <p class='light'>Send Email Notifications</p>  
@@ -224,5 +246,6 @@
     </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
   <script src="js/graphs.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
