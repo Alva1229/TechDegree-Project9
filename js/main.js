@@ -14,25 +14,43 @@ bell.addEventListener('click', ()=> {
   menuNotifications();
 });
 
+// Validate Fields in Message User
+var member = document.getElementById('search-name');
+var bio = document.getElementById('other');
+var error = document.querySelector('.error');
+
+function fieldMessage() {
+    if (member.value == "" || bio.value == "") {
+       error.innerHTML = "Please fill out all Fields";
+       setTimeout(function(){
+        error.remove();
+        location.reload();
+    },3000);
+    }
+};
+
 let send = document.getElementById("message-form");
 
-send.addEventListener("submit", successmessage);
+//Submit Message
+send.addEventListener("submit", successMessage);
 
-function successmessage(e) {
+function successMessage(e) {
     e.preventDefault();
-    var p = document.createElement("P");
-    p.id = "success-message";
-    var t = document.createTextNode("Your message was sent successfully!");
-    p.appendChild(t);
-    document.body.appendChild(p);
-    document.getElementById("message-form").appendChild(p);
-    send.reset();
-    setTimeout(function(){
-       p.remove();
-   },3000);
-}
+        if (!member.value == "" && !bio.value == "") {
+            var p = document.createElement("P");
+            p.id = "success-message";
+            var t = document.createTextNode("Your message was sent successfully!");
+            p.appendChild(t);
+            document.body.appendChild(p);
+            document.getElementById("message-form").appendChild(p);
+            send.reset();
+            setTimeout(function(){
+            p.remove();
+        },3000);
+    }
+};
 
-//Auto Complete
+
 
 
 
