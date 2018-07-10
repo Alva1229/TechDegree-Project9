@@ -21,10 +21,14 @@ var error = document.querySelector('.error');
 
 function fieldMessage() {
     if (member.value == "" || bio.value == "") {
-       error.innerHTML = "Please fill out all Fields";
+       var p = document.createElement("P");
+       p.id = "success-message";
+       var t = document.createTextNode("Please fill out all Fields");
+       p.appendChild(t);
+       document.body.appendChild(p);
+       document.getElementById("message-form").appendChild(p);
        setTimeout(function(){
-        error.remove();
-        location.reload();
+        p.remove();
     },3000);
     }
 };
